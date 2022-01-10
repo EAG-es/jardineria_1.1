@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <context-param>
+        <param-name>jdbc_uri</param-name>
+        <param-value>jdbc:mysql://localhost:3306/jardineria?zeroDateTimeBehavior=CONVERT_TO_NULL</param-value>
+    </context-param>
+    <context-param>
+        <param-name>jdbc_usuario</param-name>
+        <param-value>jardineria</param-value>
+    </context-param>
+    <context-param>
+        <param-name>jdbc_clave</param-name>
+        <param-value>2021jardineria</param-value>
+    </context-param>
+    <servlet>
+        <servlet-name>index</servlet-name>
+        <jsp-file>/index/index.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>index</servlet-name>
+        <url-pattern>/index/*</url-pattern>
+    </servlet-mapping>
+</web-app>
